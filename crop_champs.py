@@ -81,7 +81,5 @@ def crop_champ_images(images:list):
 # def main():
     # images_fold = "/home/tlm/Documents/AI_Engineer_Test/test_data/test_images"
     # re = crop_champ_fold(images_fold)
-    # image_list = glob(os.path.join(images_fold, '*.jpg'))
-    # print("Num images test fold", len(image_list))
 # if __name__ == "__main__":
 #     main()
