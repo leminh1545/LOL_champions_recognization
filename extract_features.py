@@ -5,7 +5,6 @@ from keras.applications import ResNet50
 from glob import glob
 import os
 from crop_champs import crop_champ_images
-champions_embebded_fold = "/home/tlm/Documents/AI_Engineer_Test/champions_features_embebded"
 def preprocess_cv2(images):
     images = images.astype(np.float64)
     # # Zero-center by mean pixel
@@ -40,7 +39,7 @@ def extract_feature_images(images:list, h:int, w:int):
     return features
 
 
-def extract_champions_features(images_fold, h, w):
+def extract_champions_features(images_fold, feature_fold, h, w):
     img_list = glob(os.path.join(images_fold, '*.jpg'))
     # resize both images such they they have the same size (so that the extracted features have the same dimension)
     h, w, c = h, w, 3
@@ -58,7 +57,7 @@ def extract_champions_features(images_fold, h, w):
     features = extract_resnet_features(x)
     print(features.shape)
     for i, file_name in enumerate(file_names):
-        with open(os.path.join(champions_embebded_fold,'{}.nparray'.format(file_name)), 'wb') as f:
+        with open(os.path.join(feature_fold,'{}.nparray'.format(file_name)), 'wb') as f:
             np.save(f, features[i])
 
 

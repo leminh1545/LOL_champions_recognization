@@ -83,31 +83,5 @@ def crop_champ_images(images:list):
     # re = crop_champ_fold(images_fold)
     # image_list = glob(os.path.join(images_fold, '*.jpg'))
     # print("Num images test fold", len(image_list))
-    # for image_path in image_list:
-    #     img_name = image_path.split('/')[-1][:-4]
-    #     print(img_name)
-    #     img = cv2.imread(image_path, cv2.IMREAD_COLOR)
-    #     # cv2.imshow("images", img)
-    #     # k = cv2.waitKey(0)
-    #     # if k== ord('b'):
-    #     #     cv2.destroyWindow("images")
-    #     #     break
-    #     # elif k== ord('q'): 
-    #     #     cv2.destroyWindow("images")
-    #     #     continue
-    #     crop_faces = crop_champ_face(img)
-        # print(type(crop_faces))
-        # print(crop_faces)
-        # print(len(crop_faces))
-        # result = np.concatenate((crop_img, enhanced_img, bilateral_c), axis=1)  
-        # for face in crop_faces:
-        # cv2.imshow("face", crop_faces[0])
-        # k = cv2.waitKey(0)
-        # if k== ord('b'):
-        #     cv2.destroyWindow("face")
-        #     break
-        # elif k== ord('q'): 
-        #     cv2.destroyWindow("face")
-        #     continue
 # if __name__ == "__main__":
 #     main()
